@@ -15,4 +15,6 @@ public interface IRolService {
 
     public Boolean deteleRoleById(String id);
 
+    public Optional<RolEntity> findRoleByName(String name);
+
 }

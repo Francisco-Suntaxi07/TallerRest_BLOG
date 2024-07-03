@@ -39,4 +39,8 @@ public class RolService implements IRolService{
         return false;
     }
 
+    public Optional<RolEntity> findRoleByName(String name){
+        return rolRepository.findByNOMBREROL(name);
+    }
+
 }
