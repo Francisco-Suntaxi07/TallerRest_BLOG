@@ -40,7 +40,7 @@ public class RolService implements IRolService{
     }
 
     public Optional<RolEntity> findRoleByName(String name){
-        return rolRepository.findByNOMBREROL(name);
+        return rolRepository.findByNombreRol(name);
     }
 
 }

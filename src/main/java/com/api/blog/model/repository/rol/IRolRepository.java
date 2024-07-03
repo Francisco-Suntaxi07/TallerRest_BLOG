@@ -9,5 +9,5 @@ import java.util.Optional;
 @Repository
 public interface IRolRepository extends CrudRepository<RolEntity,String> {
 
-    Optional<RolEntity> findByNOMBREROL(String name);
+    Optional<RolEntity> findByNombreRol(String name);
 }
