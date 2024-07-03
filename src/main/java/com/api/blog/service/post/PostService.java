@@ -1,6 +1,7 @@
 package com.api.blog.service.post;
 
 import com.api.blog.model.entity.post.PostEntity;
+import com.api.blog.model.entity.usuario.UsuarioEntity;
 import com.api.blog.model.repository.post.IPostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,11 +32,8 @@ public class PostService implements IPostService {
     }
 
     @Override
-    public Boolean deletePostById(String id) {
-        if (postRepository.existsById(id)){
-            postRepository.deleteById(id);
-            return true;
-        }
-        return false;
+    public void deletePostById(String id) {
+        postRepository.deleteById(id);
     }
 }
+

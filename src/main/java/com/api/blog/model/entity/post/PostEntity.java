@@ -1,3 +1,4 @@
+
 package com.api.blog.model.entity.post;
 
 import com.api.blog.model.entity.comentario.ComentarioEntity;
