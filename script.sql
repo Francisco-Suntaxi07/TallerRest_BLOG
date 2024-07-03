@@ -73,3 +73,8 @@ ALTER TABLE POST
       REFERENCES USUARIO (IDUSUARIO)
       ON UPDATE NO ACTION
       ON DELETE NO ACTION;
+
+INSERT INTO USUARIO (IDUSUARIO, NOMBREUSUARIO, EMAILUSUARIO, ROLUSUARIO)
+VALUES ('172343', 'Francisco Suntaxi', 'sf@espe.edu.ec', 'ADMIN'),
+       ('172612', 'Ricardo Grijalva', 'rs@espe.edu.ec', 'AUTOR'),
+       ('101234', 'Luis Espinosa', 'lx@espe.edu.ec', 'LECTOR');
