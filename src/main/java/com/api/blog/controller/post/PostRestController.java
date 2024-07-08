@@ -31,7 +31,7 @@ public class PostRestController {
     }
 
     @PostMapping("/save")
-    public ResponseEntity<?> savePost(@RequestHeader("X-User-Role") String role, @RequestBody PostEntity post) {
+    public ResponseEntity<?> savePost(@RequestHeader("User-Role") String role, @RequestBody PostEntity post) {
         if (!"AUTOR".equals(role)) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body("No tienes permiso para agregar nuevos posts.");
         }
@@ -47,7 +47,7 @@ public class PostRestController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<?> deletePostById(@RequestHeader("X-User-Role") String role, @PathVariable String id) {
+    public ResponseEntity<?> deletePostById(@RequestHeader("User-Role") String role, @PathVariable String id) {
         if (!"ADMIN".equals(role)) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body("No tienes permiso para eliminar posts.");
         }
