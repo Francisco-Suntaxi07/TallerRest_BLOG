@@ -7,7 +7,7 @@ CREATE TABLE COMENTARIO
    IDPOST               VARCHAR(8)                     NOT NULL,
    IDUSUARIO            VARCHAR(8)                     NOT NULL,
    MENSAJECOMENTARIO    VARCHAR(255)                   NULL,
-   FECHACOMENTARIO      TIMESTAMP                      NULL,
+   FECHACOMENTARIO      DATE                      NULL,
    CONSTRAINT PK_COMENTARIO PRIMARY KEY CLUSTERED (IDCOMENTARIO)
 );
 
