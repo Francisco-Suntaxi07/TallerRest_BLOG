@@ -1,4 +1,8 @@
+
 package com.api.blog.model.repository.post;
 
-public interface IPostRepository {
+import com.api.blog.model.entity.post.PostEntity;
+import org.springframework.data.repository.CrudRepository;
+
+public interface IPostRepository  extends CrudRepository<PostEntity,String> {
 }
