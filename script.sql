@@ -33,7 +33,7 @@ CREATE TABLE POST
    IDPOST               VARCHAR(8)                     NOT NULL,
    IDUSUARIO            VARCHAR(8)                     NOT NULL,
    DESCRIPCIONPOST      VARCHAR(128)                   NULL,
-   FECHACREACIONPOST    TIMESTAMP                      NULL,
+   FECHACREACIONPOST    DATE                      NULL,
    CONSTRAINT PK_POST PRIMARY KEY CLUSTERED (IDPOST)
 );
 
@@ -78,3 +78,7 @@ INSERT INTO USUARIO (IDUSUARIO, NOMBREUSUARIO, EMAILUSUARIO, ROLUSUARIO)
 VALUES ('172343', 'Francisco Suntaxi', 'sf@espe.edu.ec', 'ADMIN'),
        ('172612', 'Ricardo Grijalva', 'rs@espe.edu.ec', 'AUTOR'),
        ('101234', 'Luis Espinosa', 'lx@espe.edu.ec', 'LECTOR');
+
+INSERT INTO POST (IDPOST, IDUSUARIO, DESCRIPCIONPOST, FECHACREACIONPOST)
+VALUES ('123', '172343', 'mipost', '2024-05-01');
+

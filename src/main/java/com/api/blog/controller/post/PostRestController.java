@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("api/post")
+@RequestMapping("/api/post")
 public class PostRestController {
     @Autowired
     private IPostService postService;
@@ -39,6 +39,7 @@ public class PostRestController {
             logger.info("se creo el post ");
         } catch (Exception e){
             logger.error("error al registrar: " + e.getMessage());
+            return  ResponseEntity.internalServerError().build();
         }
         return new ResponseEntity<>(newUps, HttpStatus.CREATED);
     }
