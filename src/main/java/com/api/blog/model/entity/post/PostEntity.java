@@ -36,7 +36,6 @@ public class PostEntity {
     private String descripcionPost;
 
     @Column(name = "FECHACREACIONPOST")
-    @NotBlank
     private LocalDate fechaCreacionPost;
 
 
