@@ -22,7 +22,7 @@ public class ComentarioRestController {
     @Autowired
     private UsuarioService usuarioService;
 
-    @GetMapping
+    @GetMapping("/all")
     public List<ComentarioEntity> getAllComentarios() {
         return comentarioService.findAllComentarios();
     }
@@ -32,7 +32,7 @@ public class ComentarioRestController {
         Optional<ComentarioEntity> comentario = comentarioService.findComentarioById(id);
         return comentario.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
-    @PostMapping
+    @PostMapping("/save")
     public ResponseEntity<?> createComentario(@RequestBody ComentarioEntity comentario) {
         Optional<UsuarioEntity> optionalUsuario = usuarioService.findUserById(comentario.getIdUsuario());
         if (optionalUsuario.isEmpty()) {
